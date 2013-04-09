@@ -103,7 +103,7 @@ html, body {
 
 body {
   border-top: solid 5px #3b7b3d;
-  background: #5e3c17 url(./img/page_bg.gif) repeat-x 0 0; }
+  background: #3e230b url(./img/page_bg.gif) repeat-x 0 0; }
 
 a {
   color: #d32228;
@@ -177,7 +177,7 @@ h2 a:hover, h2 a:active {
   width: auto; }
 
 .map-wrap {
-  background: #5e3c17;
+  background: #3e230b;
   padding: 5px; }
 
 .header .nav {
@@ -365,7 +365,7 @@ h2.hi {
 .hours {
   width: 67%; }
   .hours caption {
-    background-color: #5e3c17;
+    background-color: #3e230b;
     color: white;
     padding: 0.3em 0.5em; }
 
