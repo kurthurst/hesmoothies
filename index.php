@@ -97,13 +97,45 @@
                     <?php endwhile; ?>
             <?php wp_reset_query(); ?>
             <?php } elseif ( is_page('menu') ){?>
-           <div class="grid">
+           <div class="grid clearfix">
+            <h2>Smoothies</h2>
             <?php $smoothies = new WP_Query();
-            $args = array( post_type => smoothies, nopaging => true, orderby => title, order => ASC);
+            $args = array( post_type => smoothies, showposts => 6, orderby => title, order => ASC);
             $smoothies->query($args);
             while ($smoothies->have_posts()) : $smoothies->the_post(); ?>
             <div class="col col-1-3">
-                <div class="module smoothie">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    </ul>
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/smoothies/" title="See more smoothies">See more smoothies &raquo;</a>
+    </div>
+     <div class="grid clearfix">
+            <h2>Food</h2>
+            <?php $food = new WP_Query();
+            $args = array( post_type => food, showposts => 6, orderby => title, order => ASC);
+            $food->query($args);
+            while ($food->have_posts()) : $food->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
                     <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
@@ -125,7 +157,265 @@
 
                 </div>
             </div>
-        <?php endwhile; ?>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <p>Sorry, we haven't built the interactive menu for this section yet. We are working on it. In the meantime you can always check out the <a href="#">PDF</a> version.</p>
+        <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/food-items/" title="See more food items">See more food items &raquo;</a>
+    </div>
+     <div class="grid clearfix">
+            <h2>Coffees</h2>
+            <?php $coffees = new WP_Query();
+            $args = array( post_type => coffees, showposts => 6, orderby => title, order => ASC);
+            $coffees->query($args);
+            while ($coffees->have_posts()) : $coffees->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <p>Sorry, we haven't built the interactive menu for this section yet. We are working on it. In the meantime you can always check out the <a href="#">PDF</a> version.</p>
+        <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/coffees/" title="See more coffees">See more coffees &raquo;</a>
+    </div>
+     <div class="grid clearfix">
+            <h2>Teas</h2>
+            <?php $teas = new WP_Query();
+            $args = array( post_type => teas, showposts => 6, orderby => title, order => ASC);
+            $teas->query($args);
+            while ( $teas->have_posts() ) : $teas->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        <?php endwhile;?>
+    <p>Sorry, we haven't built the interactive menu for this section yet. We are working on it. In the meantime you can always check out the <a href="#">PDF</a> version.</p>
+    <?php wp_reset_postdata(); ?>
+     <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/teas/" title="See more teas">See more teas &raquo;</a>   
+    </div>
+    <div class="grid clearfix">
+        <?php $menuPage = new WP_Query();
+        $args = array( page_id => 15);
+        $menuPage->query('page_id=15');
+        while ($menuPage->have_posts()) : $menuPage->the_post(); ?>
+        <div class="col col-1-1">
+            <div class="module">
+            <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+           </div>
+           <?php } elseif ( is_page('smoothies') ){?>
+           <div class="grid clearfix">
+            <?php $smoothies = new WP_Query();
+            $args = array( post_type => smoothies, nopaging => true, orderby => title, order => ASC);
+            $smoothies->query($args);
+            while ($smoothies->have_posts()) : $smoothies->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+    <div class="grid clearfix">
+        <?php $menuPage = new WP_Query();
+        $args = array( page_id => 15);
+        $menuPage->query('page_id=15');
+        while ($menuPage->have_posts()) : $menuPage->the_post(); ?>
+        <div class="col col-1-1">
+            <div class="module">
+            <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+           </div>
+            <?php } elseif ( is_page('food-items') ){?>
+           <div class="grid clearfix">
+            <?php $food = new WP_Query();
+            $args = array( post_type => food, nopaging => true, orderby => title, order => ASC);
+            $food->query($args);
+            while ($food->have_posts()) : $food->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+    <div class="grid clearfix">
+        <?php $menuPage = new WP_Query();
+        $args = array( page_id => 15);
+        $menuPage->query('page_id=15');
+        while ($menuPage->have_posts()) : $menuPage->the_post(); ?>
+        <div class="col col-1-1">
+            <div class="module">
+            <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+           </div>
+           <?php } elseif ( is_page('coffees') ){?>
+           <div class="grid clearfix">
+            <?php $coffees = new WP_Query();
+            $args = array( post_type => coffees, nopaging => true, orderby => title, order => ASC);
+            $coffees->query($args);
+            while ($coffees->have_posts()) : $coffees->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+    <div class="grid clearfix">
+        <?php $menuPage = new WP_Query();
+        $args = array( page_id => 15);
+        $menuPage->query('page_id=15');
+        while ($menuPage->have_posts()) : $menuPage->the_post(); ?>
+        <div class="col col-1-1">
+            <div class="module">
+            <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+        <?php wp_reset_query(); ?>
+           </div>
+           <?php } elseif ( is_page('teas') ){?>
+           <div class="grid clearfix">
+            <?php $teas = new WP_Query();
+            $args = array( post_type => teas, nopaging => true, orderby => title, order => ASC);
+            $teas->query($args);
+            while ($teas->have_posts()) : $teas->the_post(); ?>
+            <div class="col col-1-3">
+                <div class="module menu-item">
+                    <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php if (has_post_thumbnail() ) {
+                        the_post_thumbnail('thumbnail');
+                    } ?>
+                    <div class="info">
+                    <ul class="col col-1-2">
+                        <li><h5>Calories</h5></li>
+                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                    </ul>
+                    <ul "col col-1-2">
+                        <li><h5>Ingredients</h5></li>
+                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                    <ul>
+
+                    </div>
+
+                </div>
+            </div>
+        <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+    <div class="grid clearfix">
+        <?php $menuPage = new WP_Query();
+        $args = array( page_id => 15);
+        $menuPage->query('page_id=15');
+        while ($menuPage->have_posts()) : $menuPage->the_post(); ?>
+        <div class="col col-1-1">
+            <div class="module">
+            <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endwhile; ?>
         <?php wp_reset_query(); ?>
            </div>
 

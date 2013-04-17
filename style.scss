@@ -162,6 +162,7 @@ h2 a:hover, h2 a:active {
 .col-4-4{width:100%}
 .col-1-2{width:50%;}
 .col-2-2{width:100%;}
+.col-1-1{width:100%;}
 .module {padding:.5em;}
 .no-padding {padding:0;}
 .module img {width:auto;}
@@ -198,7 +199,10 @@ h2 a:hover, h2 a:active {
             }
         }
         ul li a {padding: .5em .8em; font-size:1.05em; color: white; text-decoration:none;}
-        ul li a:hover, ul li.current_page_item a {background: $hlgreen;}
+        ul li a:hover ul.sub-menu li a, li.current_page_item ul.sub-menu li a {background: $green;}
+        li.current_page_item ul.sub-menu li a:hover, ul li a:hover, ul li.current_page_item a, ul.sub-menu li a:hover, li.current_page_parent a {background: $hlgreen;}
+
+        
     }
     .header_search {
         position:relative;
@@ -447,7 +451,7 @@ article>p:first-of-type{
     margin-top:0;
 }
 
-.smoothie {
+.menu-item {
     position:relative;
     z-index:inherit;
     h3 {font-size:1em;}
@@ -488,7 +492,7 @@ article>p:first-of-type{
 
     }
 }
-.smoothie:hover {
+.menu-item:hover {
     .info{
         display:block;
         -webkit-transition: display 0.3s ease-out; 
@@ -497,6 +501,27 @@ article>p:first-of-type{
           transition: display 0.3s ease-out;
     }
 }
+.menu-more, .info-close{display:block; width:100%; text-align:right;}
+.info-close{
+        color:$red;
+        padding-bottom:3px;
+        position:relative;
+    }
+    .info-close:before {
+        content:"x";
+        color:white;
+        background:$red;
+        -webkit-border-radius: 50%;
+        height:.4em;
+        width:.4em;
+        font-size:.8em;
+        line-height:.3em;
+        padding:.5em;
+        position:absolute;
+        bottom:25%;
+        right: 19%;
+    }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
