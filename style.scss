@@ -492,7 +492,7 @@ article>p:first-of-type{
 
     }
 }
-.menu-item:hover {
+.menu-item:hover, .menu-item.hover_effect {
     .info{
         display:block;
         -webkit-transition: display 0.3s ease-out; 
