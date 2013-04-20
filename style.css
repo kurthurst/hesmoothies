@@ -512,20 +512,20 @@ body.single-smoothies img.wp-post-image {
   -webkit-box-shadow: 1px 1px 1px 1px #666666;
   box-shadow: 1px 1px 1px 1px #666666; }
 
-.col table {
+.nutrition table {
   border-collapse: collapse;
   width: 90%;
   text-align: left;
   background: #eee; }
-  .col table tr:nth-child(even) {
+  .nutrition table tr:nth-child(even) {
     background-color: #ccc; }
-  .col table thead {
+  .nutrition table thead {
     background: #cd6625;
     color: white;
     font-size: .7em;
     font-weight: 100;
     letter-spacing: .2em; }
-  .col table td, .col table th {
+  .nutrition table td, .nutrition table th {
     padding: .5em; }
 
 /* ==========================================================================

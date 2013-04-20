@@ -516,7 +516,7 @@
                                 the_post_thumbnail('medium');
                             } ?>
                         </div>
-                        <div class="col col-1-2">
+                        <div class="col col-1-2 nutrition">
                             <table>
                                 <thead>
                                     <tr>
