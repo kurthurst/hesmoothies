@@ -214,10 +214,10 @@ h2 a:hover, h2 a:active {
     font-size: 1.05em;
     color: white;
     text-decoration: none; }
-  .header .nav ul li a:hover ul.sub-menu li a, .header .nav li.current_page_item ul.sub-menu li a {
-    background: #3b7b3d; }
-  .header .nav li.current_page_item ul.sub-menu li a:hover, .header .nav ul li a:hover, .header .nav ul li.current_page_item a, .header .nav ul.sub-menu li a:hover, .header .nav li.current_page_parent a {
+  .header .nav li a:hover, .header .nav .current_page_item a, .header .nav .current-menu-ancestor a {
     background: #33983d; }
+  .header .nav .sub-menu li:not(.current_page_item) a {
+    background: transparent; }
 .header .header_search {
   position: relative; }
   .header .header_search form label {
@@ -432,7 +432,9 @@ h2.hi {
 
 .post_navigation {
   width: 100%;
-  margin: 2em 0; }
+  margin: 2em 0;
+  display: block;
+  padding-top: 2em; }
   .post_navigation .left {
     float: left;
     text-align: left; }
@@ -460,7 +462,7 @@ article > p:first-of-type {
     left: 15px;
     background: white;
     display: none;
-    width: 250px;
+    width: 350px;
     -webkit-box-shadow: 2px 2px 2px 2px black;
     box-shadow: 2px 2px 2px 2px black;
     -webkit-border-radius: 5px;
@@ -503,6 +505,28 @@ article > p:first-of-type {
   position: absolute;
   bottom: 25%;
   right: 19%; }
+
+body.single-smoothies img.wp-post-image {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px 1px #666666;
+  box-shadow: 1px 1px 1px 1px #666666; }
+
+.col table {
+  border-collapse: collapse;
+  width: 90%;
+  text-align: left;
+  background: #eee; }
+  .col table tr:nth-child(even) {
+    background-color: #ccc; }
+  .col table thead {
+    background: #cd6625;
+    color: white;
+    font-size: .7em;
+    font-weight: 100;
+    letter-spacing: .2em; }
+  .col table td, .col table th {
+    padding: .5em; }
 
 /* ==========================================================================
    Helper classes

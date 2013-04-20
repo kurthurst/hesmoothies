@@ -112,17 +112,21 @@
                     <button class="show-info">More Info</button>
                     <div class="info">
                         <h3><?php the_title(); ?></h3>
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul class="col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    </ul>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
                     <button class="hide-info clearfix">Close</button>
                     </div>
 
@@ -143,18 +147,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -176,18 +187,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -209,18 +227,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -257,18 +282,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -301,18 +333,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -345,18 +384,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -389,18 +435,25 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
-                    <ul class="col col-1-2">
-                        <li><h5>Calories</h5></li>
-                        <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                        <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                        <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                        <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
-                    </ul>
-                    <ul "col col-1-2">
-                        <li><h5>Ingredients</h5></li>
-                        <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
-                    <ul>
+                        <h3><?php the_title(); ?></h3>
+                    <div class="grid clearfix">
+                        <div class="module">
+                            <ul class="col col-1-3">
+                                <li><h5>Calories</h5></li>
+                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
+                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
+                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
+                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                            </ul>
+                            <ul class="col col-2-3 clearfix">
+                                <li><h5>Ingredients</h5></li>
+                                <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
+                            </ul>
+                        </div>
+                    </div>  
+                    <button class="hide-info clearfix">Close</button>
 
                     </div>
 
@@ -449,6 +502,123 @@
            <?php the_content(); ?>
             </article>
        <?php endwhile; else: ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; wp_reset_query(); ?>
+        <?php } elseif ( is_singular('smoothies') ){ ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article>
+                <h2><?php the_title(); ?></h2>
+                <span class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-width="auto" data-show-faces="false"></span>
+                <div class="grid clearfix">
+                    <div class="module">
+                        <div class="col col-1-2">
+                            <?php if ( has_post_thumbnail() ) {
+                                the_post_thumbnail('medium');
+                            } ?>
+                        </div>
+                        <div class="col col-1-2">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Calories</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12oz</td>
+                                        <td><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16oz</td>
+                                        <td><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20oz</td>
+                                        <td><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>32oz</td>
+                                        <td><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr colspan="3" scope="rowgroup">
+                                        <th>Ingredients</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr colspan="3" scope="rowgroup">
+                                        <td><?php echo get_post_meta($post->ID, 'ingredients', true); ?></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="post_navigation clearfix">
+                    <span class="left"><?php previous_post_link(); ?></span>
+                    <span class="right"><?php next_post_link(); ?></span>
+                </div>
+            </article>
+            <?php endwhile; else: ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; wp_reset_query(); ?>
+        <?php } elseif ( is_singular('food') ){ ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article>
+                <h2><?php the_title(); ?></h2>
+                <span class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-width="auto" data-show-faces="false"></span>
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('medium');
+                } ?>
+                <?php the_content(); ?>
+                food
+                <div class="post_navigation clearfix">
+                    <span class="left"><?php previous_post_link(); ?></span>
+                    <span class="right"><?php next_post_link(); ?></span>
+                </div>
+            </article>
+            <?php endwhile; else: ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; wp_reset_query(); ?>
+        <?php } elseif ( is_singular('coffees') ){ ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article>
+                <h2><?php the_title(); ?></h2>
+                <span class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-width="auto" data-show-faces="false"></span>
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('medium');
+                } ?>
+                <?php the_content(); ?>
+                coffee
+                <div class="post_navigation clearfix">
+                    <span class="left"><?php previous_post_link(); ?></span>
+                    <span class="right"><?php next_post_link(); ?></span>
+                </div>
+            </article>
+            <?php endwhile; else: ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; wp_reset_query(); ?>
+        <?php } elseif ( is_singular('teas') ){ ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <article>
+                <h2><?php the_title(); ?></h2>
+                <span class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-width="auto" data-show-faces="false"></span>
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('medium');
+                } ?>
+                <?php the_content(); ?>
+                teas
+                <div class="post_navigation clearfix">
+                    <span class="left"><?php previous_post_link(); ?></span>
+                    <span class="right"><?php next_post_link(); ?></span>
+                </div>
+            </article>
+            <?php endwhile; else: ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; wp_reset_query(); ?>
            <?php } elseif ( is_single() ){ ?>

@@ -204,9 +204,9 @@ h2 a:hover, h2 a:active {
             }
         }
         ul li a {padding: .5em .8em; font-size:1.05em; color: white; text-decoration:none;}
-        ul li a:hover ul.sub-menu li a, li.current_page_item ul.sub-menu li a {background: $green;}
-        li.current_page_item ul.sub-menu li a:hover, ul li a:hover, ul li.current_page_item a, ul.sub-menu li a:hover, li.current_page_parent a {background: $hlgreen;}
-
+        
+        li a:hover, .current_page_item a,.current-menu-ancestor a {background:$hlgreen;}
+        .sub-menu li:not(.current_page_item) a {background:transparent;}
         
     }
     .header_search {
@@ -449,6 +449,8 @@ h2.hi {
 .post_navigation{
     width:100%;
     margin:2em 0;
+    display:block;
+    padding-top:2em;
     .left{float:left; text-align:left;}
     .right{float:right; text-align:right;}
 }
@@ -476,7 +478,7 @@ article>p:first-of-type{
         left:15px;
         background:white;
         display:none;
-        width: 250px;
+        width: 350px;
         -webkit-box-shadow:2px 2px 2px 2px #000;
         box-shadow:2px 2px 2px 2px #000;
         -webkit-border-radius:5px;
@@ -528,6 +530,32 @@ article>p:first-of-type{
         bottom:25%;
         right: 19%;
     }
+
+body.single-smoothies img.wp-post-image {-webkit-border-radius:5px;
+        border-radius:5px;
+        -webkit-box-shadow:1px 1px 1px 1px #666;
+        box-shadow:1px 1px 1px 1px #666;
+    }
+.col table {
+    border-collapse:collapse;
+    width:90%;
+    text-align:left;
+    background:#eee;
+    
+    tr:nth-child(even){
+        background-color:#ccc;
+    }
+    thead {
+        background: $orange;
+        color:white;
+        font-size:.7em;
+        font-weight:100;
+        letter-spacing:.2em;
+        
+    }
+    td,th {padding:.5em;}
+}
+
 
 /* ==========================================================================
    Helper classes
