@@ -109,7 +109,9 @@
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
                     } ?>
+                    <button class="show-info">More Info</button>
                     <div class="info">
+                        <h3><?php the_title(); ?></h3>
                     <ul class="col col-1-2">
                         <li><h5>Calories</h5></li>
                         <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
@@ -117,10 +119,11 @@
                         <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
                         <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
                     </ul>
-                    <ul "col col-1-2">
+                    <ul class="col col-1-2">
                         <li><h5>Ingredients</h5></li>
                         <li><?php echo get_post_meta($post->ID, 'ingredients', true); ?></li>
                     </ul>
+                    <button class="hide-info clearfix">Close</button>
                     </div>
 
                 </div>

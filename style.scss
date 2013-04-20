@@ -238,7 +238,7 @@ h2 a:hover, h2 a:active {
     background:$green url(./img/menu_bg.png) repeat 0 0;
     color: white;
     letter-spacing:.1em;
-    font-size:.98em;
+    font-size:.8em;
     font-weight:100;
 
     h4{
@@ -476,7 +476,7 @@ article>p:first-of-type{
         left:15px;
         background:white;
         display:none;
-        width: 220px;
+        width: 250px;
         -webkit-box-shadow:2px 2px 2px 2px #000;
         box-shadow:2px 2px 2px 2px #000;
         -webkit-border-radius:5px;
@@ -484,7 +484,9 @@ article>p:first-of-type{
         text-align:center;
         padding: 10px;
         box-sizing: border-box;
-        ul {padding-left:0;}
+        ul {padding-left:0;
+            margin-top:0;
+        }
         ul li {
             list-style:none;
             span {
@@ -497,15 +499,15 @@ article>p:first-of-type{
 
     }
 }
-.menu-item:hover {
-    .info{
-        display:block;
-        -webkit-transition: display 0.3s ease-out; 
-     -moz-transition: display 0.3s ease-out; 
-       -o-transition: display 0.3s ease-out; 
-          transition: display 0.3s ease-out;
-    }
-}
+//.menu-item:hover {
+//    .info{
+//        display:block;
+//        -webkit-transition: display 0.3s ease-out; 
+//     -moz-transition: display 0.3s ease-out; 
+//      -o-transition: display 0.3s ease-out; 
+//          transition: display 0.3s ease-out;
+//    }
+//}
 .menu-more, .info-close{display:block; width:100%; text-align:right;}
 .info-close{
         color:$red;

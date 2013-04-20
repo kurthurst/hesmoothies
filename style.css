@@ -238,7 +238,7 @@ h2 a:hover, h2 a:active {
   background: #3b7b3d url(./img/menu_bg.png) repeat 0 0;
   color: white;
   letter-spacing: .1em;
-  font-size: .98em;
+  font-size: .8em;
   font-weight: 100; }
   .footer h4 {
     font-size: 1.1em;
@@ -460,7 +460,7 @@ article > p:first-of-type {
     left: 15px;
     background: white;
     display: none;
-    width: 220px;
+    width: 250px;
     -webkit-box-shadow: 2px 2px 2px 2px black;
     box-shadow: 2px 2px 2px 2px black;
     -webkit-border-radius: 5px;
@@ -472,19 +472,13 @@ article > p:first-of-type {
       margin-top: 0;
       margin-bottom: .5em; }
     .menu-item .info ul {
-      padding-left: 0; }
+      padding-left: 0;
+      margin-top: 0; }
     .menu-item .info ul li {
       list-style: none; }
       .menu-item .info ul li span {
         padding-right: 25px;
         font-weight: bold; }
-
-.menu-item:hover .info {
-  display: block;
-  -webkit-transition: display 0.3s ease-out;
-  -moz-transition: display 0.3s ease-out;
-  -o-transition: display 0.3s ease-out;
-  transition: display 0.3s ease-out; }
 
 .menu-more, .info-close {
   display: block;
