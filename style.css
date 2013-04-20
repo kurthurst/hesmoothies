@@ -179,9 +179,15 @@ h2 a:hover, h2 a:active {
 .module img {
   width: auto; }
 
+@media screen and (max-width: 480px) {
+  .col-1-3, .col-2-3, .col-3-3, .col-1-4, .col-2-4, .col-3-4, .col-4-4, .col-1-2, .col-2-2 {
+    width: 100; } }
 .map-wrap {
   background: #3e230b;
   padding: 5px; }
+
+.no-border {
+  border: none; }
 
 .header .nav {
   background: #3b7b3d url(./img/menu_bg.png) repeat 0 0; }
@@ -473,7 +479,7 @@ article > p:first-of-type {
         padding-right: 25px;
         font-weight: bold; }
 
-.menu-item:hover .info, .menu-item.hover_effect .info {
+.menu-item:hover .info {
   display: block;
   -webkit-transition: display 0.3s ease-out;
   -moz-transition: display 0.3s ease-out;

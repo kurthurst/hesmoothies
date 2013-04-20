@@ -56,7 +56,7 @@
                     <div class="grid clearfix">
                         <div class="col col-2-3">
                             <div class="module">
-                                <h1><span class="visuallyhidden">Healthy Essentials</span><a href="<?php bloginfo('siteurl'); ?>" title="Healthy Essentials"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" /></a></h1>
+                                <h1><span class="visuallyhidden">Healthy Essentials</span><a href="<?php bloginfo('siteurl'); ?>" title="Healthy Essentials" class="no-border"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" /></a></h1>
                             </div>
                         </div>
                         <div class="col col-1-3">
@@ -104,7 +104,7 @@
             $smoothies->query($args);
             while ($smoothies->have_posts()) : $smoothies->the_post(); ?>
             <div class="col col-1-3">
-                <div class="module menu-item hover">
+                <div class="module menu-item">
                     <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                     <?php if (has_post_thumbnail() ) {
                         the_post_thumbnail('thumbnail');
