@@ -205,13 +205,14 @@ h2 a:hover, h2 a:active {
         }
         ul li a {padding: .5em .8em; font-size:1.05em; color: white; text-decoration:none;}
         
-        li a:hover, .current_page_item a,.current-menu-ancestor a {background:$hlgreen;}
+        li a:hover, .current_page_item a,.current-menu-ancestor a, .current-menu-ancestor .sub-menu li a:hover {background:$hlgreen;}
         .sub-menu li:not(.current_page_item) a {background:transparent;}
         
     }
     .header_search {
         position:relative;
         form{
+            
             label {
                 border: 0;
                 clip: rect(0 0 0 0);

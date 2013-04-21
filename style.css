@@ -214,7 +214,7 @@ h2 a:hover, h2 a:active {
     font-size: 1.05em;
     color: white;
     text-decoration: none; }
-  .header .nav li a:hover, .header .nav .current_page_item a, .header .nav .current-menu-ancestor a {
+  .header .nav li a:hover, .header .nav .current_page_item a, .header .nav .current-menu-ancestor a, .header .nav .current-menu-ancestor .sub-menu li a:hover {
     background: #33983d; }
   .header .nav .sub-menu li:not(.current_page_item) a {
     background: transparent; }
