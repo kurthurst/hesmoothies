@@ -367,7 +367,11 @@ form#searchform {
   background: #3b7b3d;
   height: 55px;
   position: absolute;
-  top: 0; }
+  top: 0;
+  -mz-border-radius-bottomright: 5px;
+  -mz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
 
 h2.hi {
   font-size: 2.7em;
