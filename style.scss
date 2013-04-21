@@ -183,18 +183,18 @@ h2 a:hover, h2 a:active {
         ul li { 
             display: inline;
             position:relative;
-            ul {
+            ul.sub-menu {
                 position:absolute;
+                left:-999em;
                 top:100%;
-                display:none;
+                display:block;
+                background:$green url(./img/menu_bg.png) repeat 0 0;
                 z-index:1;
-
             }
         }
         ul li:hover {
-            ul {
-                display:block;
-                background:$green url(./img/menu_bg.png) repeat 0 0;
+            ul.sub-menu {
+                left:0;
                 li {
                     display:block;
                     width: 150px;
