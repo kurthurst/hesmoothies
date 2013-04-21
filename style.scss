@@ -207,6 +207,7 @@ h2 a:hover, h2 a:active {
         
         li a:hover, .current_page_item a,.current-menu-ancestor a, .current-menu-ancestor .sub-menu li a:hover {background:$hlgreen;}
         .sub-menu li:not(.current_page_item) a {background:transparent;}
+        .sub-menu li a:hover {background:$hlgreen;}
         
     }
     .header_search {

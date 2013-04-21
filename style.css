@@ -219,6 +219,8 @@ h2 a:hover, h2 a:active {
     background: #33983d; }
   .header .nav .sub-menu li:not(.current_page_item) a {
     background: transparent; }
+  .header .nav .sub-menu li a:hover {
+    background: #33983d; }
 .header .header_search {
   position: relative; }
   .header .header_search form label {
