@@ -537,10 +537,11 @@ article>p:first-of-type{
         right: 19%;
     }
 
-body.single-smoothies img.wp-post-image {-webkit-border-radius:5px;
+body.single-smoothies img.wp-post-image, body.single-food img.wp-post-image, body.single-coffee img.wp-post-image {-webkit-border-radius:5px;
         border-radius:5px;
         -webkit-box-shadow:1px 1px 1px 1px #666;
         box-shadow:1px 1px 1px 1px #666;
+        max-width: 100%;
     }
 .nutrition table {
     border-collapse:collapse;

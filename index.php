@@ -153,11 +153,10 @@
                     <div class="grid clearfix">
                         <div class="module">
                             <ul class="col col-1-3">
-                                <li><h5>Calories</h5></li>
-                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                                <li><h5>Nutrition Info</h5></li>
+                                <li><span>Cal</span><?php echo get_post_meta($post->ID, 'calories', true); ?></li>
+                                <li><span>Fat</span><?php echo get_post_meta($post->ID, 'fat', true); ?></li>
+                                <li><span>Carb</span><?php echo get_post_meta($post->ID, 'carbohydrates', true); ?></li>
                             </ul>
                             <ul class="col col-2-3 clearfix">
                                 <li><h5>Ingredients</h5></li>
@@ -172,7 +171,6 @@
                 </div>
             </div>
         <?php endwhile; wp_reset_postdata(); ?>
-        <p>Sorry, we haven't built the interactive menu for this section yet. We are working on it. In the meantime you can always check out the <a href="#">PDF</a> version.</p>
         <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/food-items/" title="See more food items">See more food items &raquo;</a>
     </div>
      <div class="grid clearfix">
@@ -212,7 +210,6 @@
                 </div>
             </div>
         <?php endwhile; wp_reset_postdata(); ?>
-        <p>Sorry, we haven't built the interactive menu for this section yet. We are working on it. In the meantime you can always check out the <a href="#">PDF</a> version.</p>
         <a class="menu-more" href="<?php bloginfo('siteurl') ?>/menu/coffees/" title="See more coffees">See more coffees &raquo;</a>
     </div>
      <div class="grid clearfix">
@@ -338,12 +335,11 @@
                         <h3><?php the_title(); ?></h3>
                     <div class="grid clearfix">
                         <div class="module">
-                            <ul class="col col-1-3">
-                                <li><h5>Calories</h5></li>
-                                <li><span>12oz</span><?php echo get_post_meta($post->ID, 'calories_12oz', true); ?></li>
-                                <li><span>16oz</span><?php echo get_post_meta($post->ID, 'calories_16oz', true); ?></li>
-                                <li><span>20oz</span><?php echo get_post_meta($post->ID, 'calories_20oz', true); ?></li>
-                                <li><span>32oz</span><?php echo get_post_meta($post->ID, 'calories_32oz', true); ?></li>
+                             <ul class="col col-1-3">
+                                <li><h5>Nutrition Info</h5></li>
+                                <li><span>Cal</span><?php echo get_post_meta($post->ID, 'calories', true); ?></li>
+                                <li><span>Fat</span><?php echo get_post_meta($post->ID, 'fat', true); ?></li>
+                                <li><span>Carb</span><?php echo get_post_meta($post->ID, 'carbohydrates', true); ?></li>
                             </ul>
                             <ul class="col col-2-3 clearfix">
                                 <li><h5>Ingredients</h5></li>
@@ -572,11 +568,51 @@
             <article>
                 <h2><?php the_title(); ?></h2>
                 <span class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-width="auto" data-show-faces="false"></span>
-                <?php if ( has_post_thumbnail() ) {
-                    the_post_thumbnail('medium');
-                } ?>
-                <?php the_content(); ?>
-                food
+                <div class="grid clearfix">
+                    <div class="module">
+                        <div class="col col-1-2">
+                            <?php if ( has_post_thumbnail() ) {
+                                the_post_thumbnail('medium');
+                            } ?>
+                        </div>
+                        <div class="col col-1-2 nutrition">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Nutrition Info</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Calories</td>
+                                        <td><?php echo get_post_meta($post->ID, 'calories', true); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fat</td>
+                                        <td><?php echo get_post_meta($post->ID, 'fat', true); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carbohydrates</td>
+                                        <td><?php echo get_post_meta($post->ID, 'carbohydrates', true); ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr colspan="2" scope="rowgroup">
+                                        <th>Ingredients</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr colspan="2" scope="rowgroup">
+                                        <td><?php echo get_post_meta($post->ID, 'ingredients', true); ?></td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <div class="post_navigation clearfix">
                     <span class="left"><?php previous_post_link(); ?></span>
                     <span class="right"><?php next_post_link(); ?></span>
@@ -642,8 +678,17 @@
             <?php if ( have_posts() ) : ?>
                 <h1><?php printf( __( 'Search Results for: %s', 'twentyten' ), '' . get_search_query() . '' ); ?></h1>
                 <?php while ( have_posts() ) : the_post(); ?>
+                <div class="grid">
+                    <div class="col col-1-1">
+                        <div class="module">
                 <h2><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+                <?php if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('thumbnail');
+                } ?>
                 <?php the_excerpt(); ?>
+                        </div>
+                    </div>
+                </div>
 <?php endwhile; ?>
 <?php else : ?>
                     <h2><?php _e( 'Nothing Found', 'twentyten' ); ?></h2>

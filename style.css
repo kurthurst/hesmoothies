@@ -47,7 +47,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -193,7 +193,7 @@ h2 a:hover, h2 a:active {
   background: #3b7b3d url(./img/menu_bg.png) repeat 0 0; }
   .header .nav ul {
     padding: 0;
-    margin: 0.5em 0; }
+    margin: .5em 0; }
   .header .nav ul li {
     display: inline;
     position: relative; }
@@ -209,9 +209,9 @@ h2 a:hover, h2 a:active {
     .header .nav ul li:hover ul.sub-menu li {
       display: block;
       width: 150px;
-      padding: 0.5em 0; }
+      padding: .5em 0; }
   .header .nav ul li a {
-    padding: 0.5em 0.8em;
+    padding: .5em .8em;
     font-size: 1.05em;
     color: white;
     text-decoration: none; }
@@ -285,7 +285,7 @@ h2 a:hover, h2 a:active {
 span.recent_posts_banner {
   background: #3b7b3d;
   color: white;
-  padding: 0.3em 1.7em 0.3em 1.7em;
+  padding: .3em 1.7em .3em 1.7em;
   margin-left: -1.5em;
   margin-top: 1.5em;
   position: relative; }
@@ -341,14 +341,14 @@ form.signup, form#searchform {
     right: .5em;
     height: 30px;
     width: 85px;
-    -moz-box-shadow: inset 0px 1px 0px 0px white;
-    -webkit-box-shadow: inset 0px 1px 0px 0px white;
-    box-shadow: inset 0px 1px 0px 0px white;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
     background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
     background-color: #ededed;
-    border: 1px solid gainsboro;
+    border: 1px solid #dcdcdc;
     display: inline-block;
     color: #777777;
     font-family: arial;
@@ -356,7 +356,7 @@ form.signup, form#searchform {
     font-weight: bold;
     padding: 6px;
     text-decoration: none;
-    text-shadow: 1px 1px 0px white; }
+    text-shadow: 1px 1px 0px #ffffff; }
   form.signup input[type="submit"]:hover, form#searchform input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
     background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
@@ -385,12 +385,12 @@ h2.hi {
   .hours caption {
     background-color: #3e230b;
     color: white;
-    padding: 0.3em 0.5em; }
+    padding: .3em .5em; }
 
 #clean_contact {
   border: solid 1px #17733e;
   background: #33983d;
-  padding: 1em 0.5em;
+  padding: 1em .5em;
   color: white;
   letter-spacing: .1em; }
   #clean_contact input[type="text"] {
@@ -406,14 +406,14 @@ h2.hi {
   #clean_contact input[type="submit"] {
     height: 31px;
     width: 85px;
-    -moz-box-shadow: inset 0px 1px 0px 0px white;
-    -webkit-box-shadow: inset 0px 1px 0px 0px white;
-    box-shadow: inset 0px 1px 0px 0px white;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
     background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
     background-color: #ededed;
-    border: 1px solid gainsboro;
+    border: 1px solid #dcdcdc;
     display: inline-block;
     color: #777777;
     font-family: arial;
@@ -421,7 +421,7 @@ h2.hi {
     font-weight: bold;
     padding: 6px;
     text-decoration: none;
-    text-shadow: 1px 1px 0px white;
+    text-shadow: 1px 1px 0px #ffffff;
     margin-left: .5em; }
   #clean_contact input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
@@ -431,11 +431,11 @@ h2.hi {
 
 .home .attachment-thumbnail, .blog .attachment-thumbnail {
   float: left;
-  margin: 0 0.5em 0.5em 0; }
+  margin: 0 .5em .5em 0; }
 
 .wp-post-image {
   float: left;
-  margin: 0 0.5em 0.5em 0; }
+  margin: 0 .5em .5em 0; }
 
 .post_navigation {
   width: 100%;
@@ -460,8 +460,8 @@ article > p:first-of-type {
   .menu-item img {
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 1px 1px #666666;
-    box-shadow: 1px 1px 1px 1px #666666; }
+    -webkit-box-shadow: 1px 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px 1px #666; }
   .menu-item .info {
     z-index: 10;
     position: absolute;
@@ -470,8 +470,8 @@ article > p:first-of-type {
     background: white;
     display: none;
     width: 350px;
-    -webkit-box-shadow: 2px 2px 2px 2px black;
-    box-shadow: 2px 2px 2px 2px black;
+    -webkit-box-shadow: 2px 2px 2px 2px #000;
+    box-shadow: 2px 2px 2px 2px #000;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     text-align: center;
@@ -513,11 +513,12 @@ article > p:first-of-type {
   bottom: 25%;
   right: 19%; }
 
-body.single-smoothies img.wp-post-image {
+body.single-smoothies img.wp-post-image, body.single-food img.wp-post-image, body.single-coffee img.wp-post-image {
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 1px 1px #666666;
-  box-shadow: 1px 1px 1px 1px #666666; }
+  -webkit-box-shadow: 1px 1px 1px 1px #666;
+  box-shadow: 1px 1px 1px 1px #666;
+  max-width: 100%; }
 
 .nutrition table {
   border-collapse: collapse;
@@ -635,7 +636,7 @@ body.single-smoothies img.wp-post-image {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -660,7 +661,7 @@ body.single-smoothies img.wp-post-image {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {
